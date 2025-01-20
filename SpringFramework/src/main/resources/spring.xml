@@ -1,0 +1,29 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="alien" class="org.example.Alien" autowire="byType">
+<!--        if u want to initialise the values of the property using setters method use property tag -->
+        <property name="age" value="25"/>
+<!--        <property name="lap" ref="laptop"/>-->
+        <property name="com" ref="com">
+            <bean id="com" class="org.example.Laptop"/>
+        </property>
+
+<!--        if you want to initialse the values of the property through constructor then use below tag-->
+<!--        but we have restriction here is we could have multiple properties with same type(ex: int)-->
+<!--        <constructor-arg type="org.example.Compiler" ref="comp1"/>-->
+<!--        <constructor-arg type="int" value="16"/>-->
+
+<!--        ideally we should use index to specify which parameter goes to which while constructor is called-->
+<!--            <constructor-arg index="1" ref="comp1"/>-->
+<!--            <constructor-arg index="0" value="16"/>-->
+
+<!--        if i want to use below, then use constructor properties in the class-->
+<!--            <constructor-arg name="comp" ref="comp1"/>-->
+<!--            <constructor-arg name="age" value="16"/>-->
+    </bean>
+<!--    <bean id="com" class="org.example.Laptop"/>-->
+    <bean id="desk1" class="org.example.DesktopCustom"/>
+</beans>
