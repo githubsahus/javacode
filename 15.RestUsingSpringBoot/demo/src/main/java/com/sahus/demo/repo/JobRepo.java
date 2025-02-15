@@ -54,7 +54,7 @@ public class JobRepo {
         }
     }
 
-    public void deleteJob(Jobs job) {
-        jobs.removeIf(iJob -> iJob.getJobId() == job.getJobId());
+    public void deleteJob(int jobId) {
+        jobs.removeIf(iJob -> iJob.getJobId() == jobId);
     }
 }

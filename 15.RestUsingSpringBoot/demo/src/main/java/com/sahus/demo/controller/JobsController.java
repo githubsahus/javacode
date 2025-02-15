@@ -38,9 +38,9 @@ public class JobsController {
         return service.getJob(job.getJobId());
     }
 
-    @DeleteMapping("job")
-    public String deleteJob(@RequestBody Jobs job){
-        service.deleteJob(job);
+    @DeleteMapping("job/{jobId}")
+    public String deleteJob(@PathVariable int jobId){
+        service.deleteJob(jobId);
         return "deleted";
     }
 
