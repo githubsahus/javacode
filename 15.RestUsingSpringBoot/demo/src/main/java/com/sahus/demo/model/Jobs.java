@@ -4,27 +4,28 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Jobs {
-    private int i;
+    private int jobId;
     private String desc;
 
-    public int getI() {
-        return i;
+
+    public int getJobId() {
+        return jobId;
     }
 
     public String getDesc() {
         return desc;
     }
 
-    public void setI(int i) {
-        this.i = i;
+    public void setJobId(int jobId) {
+        this.jobId = jobId;
     }
 
     public void setDesc(String desc) {
         this.desc = desc;
     }
 
-    public Jobs(int i, String desc) {
-        this.i = i;
+    public Jobs(int jobId, String desc) {
+        this.jobId = jobId;
         this.desc = desc;
     }
 

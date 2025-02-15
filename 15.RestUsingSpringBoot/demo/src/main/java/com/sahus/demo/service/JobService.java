@@ -15,4 +15,20 @@ public class JobService {
         System.out.println("in service");
         return  repo.getAllJobs();
     }
+
+    public Jobs getJob(int jobid) {
+        return repo.getJob(jobid);
+    }
+
+    public void addJob(Jobs job) {
+        repo.addJob(job);
+    }
+
+    public void updateJob(Jobs job) {
+        repo.updateJob(job);
+    }
+
+    public void deleteJob(Jobs job) {
+        repo.deleteJob(job);
+    }
 }
